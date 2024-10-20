@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1f3b;
+    color: #fff;
+    overflow: hidden;
+}
+
+.about-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.about-content {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff69b4;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Abstract floating shapes */
+.abstract-design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.abstract-design::before,
+.abstract-design::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 105, 180, 0.6);
+    animation: float-shapes 15s infinite ease-in-out;
+    mix-blend-mode: screen;
+}
+
+.abstract-design::before {
+    width: 250px;
+    height: 250px;
+    top: 20%;
+    left: 15%;
+    background-color: #ff69b4;
+}
+
+.abstract-design::after {
+    width: 400px;
+    height: 400px;
+    bottom: 10%;
+    right: 20%;
+    background-color: rgba(135, 206, 250, 0.5);
+}
+
+/* Additional abstract shapes */
+.shape1, .shape2, .shape3 {
+    position: absolute;
+    background: rgba(135, 206, 250, 0.5);
+    border-radius: 50%;
+    animation: float-shapes 10s infinite ease-in-out;
+}
+
+.shape1 {
+    width: 150px;
+    height: 150px;
+    top: 30%;
+    left: 70%;
+}
+
+.shape2 {
+    width: 100px;
+    height: 100px;
+    bottom: 15%;
+    right: 5%;
+}
+
+.shape3 {
+    width: 80px;
+    height: 80px;
+    top: 5%;
+    right: 25%;
+}
+
+/* Keyframe animations */
+@keyframes float-shapes {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(45deg);
+    }
+}

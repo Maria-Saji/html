@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Biodata</title>
+    <link rel="stylesheet" href="biodata1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="profile-photo">
+                <img src="mc.jpg" alt="Profile Photo">
+            </div>
+            <div class="profile-info">
+                <h1>MARIA SAJI</h1>
+                <p>Student at Maharaja Institute of Technology Thandavapura</p>
+                <a href="mariab.pdf.pdf" class="download-btn" download>Download Biodata <i class="fas fa-download"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Buttons Section -->
+    <section class="nav-section">
+        <div class="nav-buttons">
+            <button class="nav-btn" onclick="showSection('personal')">Personal Information</button>
+            <button class="nav-btn" onclick="showSection('languages')">Languages Spoken</button>
+            <button class="nav-btn" onclick="showSection('interests')">Interests</button>
+            <button class="nav-btn" onclick="showSection('contact')">Contact Information</button>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="content-section" id="welcome-section">
+        <div class="content">
+            <h2>Hello, I am Maria Saji!</h2>
+            <p>I am a student at Maharaja Institute of Technology Thandavapura.</p>
+        </div>
+    </section>
+
+    <!-- Dynamic Content Section -->
+    <section class="content-section" id="content-section">
+        <!-- Personal Information Section -->
+        <div id="personal" class="content hidden">
+            <h2>Personal Information</h2>
+            <ul>
+                <li onclick="showDetail('full-name')">Full Name: Maria Saji</li>
+                <li onclick="showDetail('dob')">Date of Birth:28th August 2004</li>
+                <li onclick="showDetail('age')">Age: 20</li>
+                <li onclick="showDetail('fathers-name')">Father's Name:Simon Joseph </li>
+                <li onclick="showDetail('marital-status')">Marital Status: Single</li>
+                <li onclick="showDetail('gender')">Gender: Female</li>
+                <li onclick="showDetail('cgpa')">Previous Year CGPA: 9.4</li>
+                <li onclick="showDetail('birth-place')">Place of Birth: Bengaluru</li>
+            </ul>
+            <!-- Details Section -->
+            <div id="details" class="details hidden"></div>
+        </div>
+
+        <!-- Languages Spoken Section -->
+        <div id="languages" class="content hidden">
+            <h2>Languages Spoken</h2>
+            <ul>
+                <li>English (Fluent)</li>
+                <li>Hindi (Fluent)</li>
+                <li>Kannada (Fluent)</li>
+                <li>Malayalam(Fluent)</li>
+            </ul>
+        </div>
+
+        <!-- Interests Section -->
+        <div id="interests" class="content hidden">
+            <h2>Interests</h2>
+            <ul>
+                <li onclick="showDetail('prizes')">Prizes Won in Extra-Curricular Activities</li>
+                <li onclick="showDetail('sports')">Sports: Basketball, Badminton</li>
+                <li onclick="showDetail('hobbies')">Hobbies: Reading, Painting, Photography</li>
+            </ul>
+            <!-- Details Section for Interests -->
+            <div id="interest-details" class="details hidden"></div>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div id="contact" class="content hidden">
+            <h2>Contact Information</h2>
+            <ul>
+                <li><i class="fas fa-envelope"></i> mariasaji@example.com</li>
+                <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                <li><i class="fas fa-map-marker-alt"></i> 1234 Elm St, Bengaluru</li>
+                <li><i class="fas fa-globe"></i> www.mariasaji.com</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // Function to show the corresponding section
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.classList.add('hidden'));
+
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        // Function to show details for personal information and interests
+        function showDetail(detailId) {
+            const detailsContent = {
+                'full-name': 'Full Name: ',
+                'dob': 'Date of Birth: 15th June 2000',
+                'age': 'Age: 24',
+                'fathers-name': "Father's Name: ",
+                'marital-status': 'Marital Status: Single',
+                'gender': 'Gender: Female',
+                'cgpa': 'Previous Year CGPA: 8.5',
+                'birth-place': 'Place of Birth: Bengaluru',
+                'prizes': 'Won 1st place in inter-college debate competitions and 2nd place in painting competitions.',
+                'sports': 'Participated in college basketball and badminton teams.',
+                'hobbies': 'Hobbies include reading books, painting landscapes, and capturing moments through photography.'
+            };
+
+            // Clear any previous details
+            document.getElementById('details').innerHTML = '';
+            document.getElementById('interest-details').innerHTML = '';
+
+            // Show the selected detail
+            if (detailId in detailsContent) {
+                if (detailId.startsWith('p')) {
+                    document.getElementById('details').classList.remove('hidden');
+                    document.getElementById('details').innerHTML = `<p>${detailsContent[detailId]}</p>`;
+                } else {
+                    document.getElementById('interest-details').classList.remove('hidden');
+                    document.getElementById('interest-details').innerHTML = `<p>${detailsContent[detailId]}</p>`;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

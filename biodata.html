@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Links</title>
+    <link rel="stylesheet" href="biodata.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Abstract design with modern style */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #d6e6ff);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 30px;
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .biodata-buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .biodata-buttons .btn {
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .biodata-buttons .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-back {
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #5a6268;
+        }
+
+        /* Abstract design using geometric shapes */
+        .abstract-shape {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.1);
+            top: 10%;
+            left: 20%;
+            z-index: -1;
+        }
+
+        .abstract-shape-2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(0, 123, 255, 0.05);
+            bottom: 10%;
+            right: 10%;
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Biodata Links</h2>
+             <h3>Please click any button below to display biodata</h3>
+            <div class="biodata-buttons">
+                <a href="biodata1.html" class="btn">Shreyas S</a>
+                <a href="biodata2.html" class="btn">Maria Saji</a>
+                <a href="biodata3.html" class="btn">Rahul Devaraj</a>
+            </div>
+            <a href="index.html" class="btn-back">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Abstract design elements -->
+    <div class="abstract-shape"></div>
+    <div class="abstract-shape-2"></div>
+</body>
+</html>

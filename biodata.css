@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1f3b;
+    color: #fff;
+}
+
+.biodata-container {
+    display: flex;
+    padding: 50px;
+    background: linear-gradient(to right, #1b1f3b 30%, #ff69b4 70%);
+    height: 100vh;
+}
+
+.left-side {
+    flex: 1;
+    padding: 30px;
+    background-color: #2d2f4b;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ff69b4;
+}
+
+.right-side {
+    flex: 1;
+    padding: 30px;
+}
+
+h3 {
+    color: #ff69b4;
+}
+
+p {
+    margin: 10px 0;
+}
+/* Add this to biodata.css */
+.biodata-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.biodata-actions .btn {
+    background-color: rgba(255, 105, 180, 0.8);
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 10px;
+    color: #000;
+    display: inline-block;
+}
+
+.biodata-actions .btn:hover {
+    background-color: #fff;
+}

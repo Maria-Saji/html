@@ -1,0 +1,124 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #d6e6ff);
+    color: #333;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.resume-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resume-buttons .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.resume-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Back button */
+.btn-back {
+    margin-top: 20px;
+    background-color: #6c757d;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+}
+
+/* Abstract shapes */
+.abstract-shape {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(0, 123, 255, 0.1);
+    top: 10%;
+    left: 20%;
+    z-index: -1;
+}
+
+.abstract-shape-2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 123, 255, 0.05);
+    bottom: 10%;
+    right: 10%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+    }
+
+    .resume-buttons .btn, .btn-back {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
