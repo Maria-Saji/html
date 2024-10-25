@@ -18,6 +18,22 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8; /* Adjust background color as needed */
+    z-index: 2;
+    position: relative;
+}
+
+.logo {
+    max-width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
 /* Hero Section */
 #home {
     height: 100vh;
@@ -101,7 +117,7 @@ body {
     color: #fff;
 }
 
-/* Moving text animation */
+/* Moving Text Animation */
 .moving-text {
     position: absolute;
     top: 0;
