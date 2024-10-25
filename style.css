@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f8f8f8;
+    background-color: rgba(0, 0, 0, 0.5); /* Matches the background of the homepage */
     width: 100%;
     position: fixed;
     top: 0;
