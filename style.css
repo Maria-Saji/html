@@ -62,7 +62,7 @@ body {
 
 /* Navigation Links */
 .nav-links {
-    position: absolute;
+    position: center;
     top: 30px;
     left: 150px;
     display: flex;
