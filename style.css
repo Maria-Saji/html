@@ -25,7 +25,7 @@ body {
     left: 10px;
     display: flex;
     align-items: center; /* Align logos vertically */
-    gap: 15px;
+    gap: 100px;
     z-index: 1;
 }
 
